@@ -15,11 +15,12 @@ modified_time: '2017-04-07T10:30:22.187+02:00'
 blogger_id: tag:blogger.com,1999:blog-8196940592943844696.post-5305401977153190905
 blogger_orig_url: http://keenformatics.blogspot.com/2017/04/how-to-generate-documentation-with.html
 comments: true
-excerpt: "Sphinx is a documentation generator that can help building great docs for our projects in a very short time. In this tutorial I will show how to use it to build docs starting from pre-existing Python docstrings."
+
 ---
 
 [Sphinx][8] is a documentation generator that can help building great docs for our projects in a very short time. In this tutorial I will show how to use it to build docs starting from pre-existing Python docstrings.
 
+<!--more-->
 ## Installing and configuring Sphinx
 
 > **NOTE:** If you are developing your Python package using `virtualenv`, I recommend installing Sphinx directly inside your virtual environment (see explanation at the end of the article).
