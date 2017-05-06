@@ -13,7 +13,12 @@ tags:
 - Tiles 3
 - java
 modified_time: '2013-08-01T10:12:03.647+02:00'
-thumbnail: http://3.bp.blogspot.com/-ATcmkjh7PKs/UfeXeSzuNoI/AAAAAAAAANM/IY6V9GXTHlQ/s72-c/error403.jpg
+
+image:
+  preview: error403.jpg
+  feature: error403.jpg
+  credit: Unknown
+
 blogger_id: tag:blogger.com,1999:blog-8196940592943844696.post-7311126445143491920
 blogger_orig_url: http://keenformatics.blogspot.com/2013/07/how-to-create-customized-access-denied.html
 excerpt: "Your new site finally needs the last thouch.
@@ -21,4 +26,7 @@ You're wasting your time walking back and forth in your room trying to think abo
 <br/>Now the question is: how the hell can I do that?"
 ---
 
-<div style="text-align: left;"></div><table cellpadding="0" cellspacing="0" class="tr-caption-container" style="float: left; margin-right: 1em; text-align: left;"><tbody><tr><td style="text-align: center;"><a href="https://apps.cs50.net/img/error403.gif" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: auto;" target="_blank"><img border="0" height="163" src="http://3.bp.blogspot.com/-ATcmkjh7PKs/UfeXeSzuNoI/AAAAAAAAANM/IY6V9GXTHlQ/s200/error403.jpg" width="200" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><a href="https://apps.cs50.net/img/error403.gif" target="_blank">https://apps.cs50.net/img/error403.gif</a></td></tr></tbody></table>Your new site finally needs the last thouch. <br />You're wasting your time walking back and forth in your room trying to think about what to do to improve it: suddenly, you remember that time when you first saw a customized landing page for that (otherwise) annoying <b>403 error</b>. <br />Now the question is: how the hell can I do that?<br /><br /><h4>And here's the answer!</h4><br /><span style="font-size: x-small;">(Yes, that was an absolutely boring post introduction, but I'm not a writer. Not yet, at least.)</span><br /><br /><br /><br /><h1>The steps!</h1>1) In <b>security-config.xml</b><br /><br /><pre class="prettyprint lang-scm">&lt;security:access-denied-handler error-page="/accessdenied"&gt;</pre><br />2) In <b>webmvc-config.xml</b><br /><br /><pre class="prettyprint">&lt;mvc:view-controller path="/accessdenied" view-name="common.accessdenied"&gt;<br />&lt;/mvc:view-controller&gt;</pre><br />3) In <b>tiles-defs.xml</b> (your tiles definitions file) define the tile for your landing page<br /><br /><pre class="prettyprint"><br />    &lt;definition extends="template" name="errors.denied"&gt;<br />        &lt;put-attribute name="content" value="/WEB-INF/views/denied.jsp"&gt;<br />    &lt;/put-attribute&gt;&lt;/definition&gt;<br /></pre><br />Obviously, change the paths consequently to your denied.jsp location. <br /><span style="font-size: large;">You're done!</span><br /><br />Now, you just have to customize the jsp in order to show the contents you want.<br />I suggest you to take a look at the <a href="https://github.com/asdsa">404 github pages</a>: they're awesome.
+Your new site finally needs the last thouch. <br />You're wasting your time walking back and forth in your room trying to think about what to do to improve it: suddenly, you remember that time when you first saw a customized landing page for that (otherwise) annoying <b>403 error</b>. <br />Now the question is: how the hell can I do that?<br /><br /><h4>And here's the answer!</h4>
+<span style="font-size: x-small;">(Yes, that was an absolutely boring post introduction, but I'm not a writer. Not yet, at least.)</span><br />
+<h1>The steps!</h1>
+1) In <b>security-config.xml</b><br /><br /><pre class="prettyprint lang-scm">&lt;security:access-denied-handler error-page="/accessdenied"&gt;</pre><br />2) In <b>webmvc-config.xml</b><br /><br /><pre class="prettyprint">&lt;mvc:view-controller path="/accessdenied" view-name="common.accessdenied"&gt;<br />&lt;/mvc:view-controller&gt;</pre><br />3) In <b>tiles-defs.xml</b> (your tiles definitions file) define the tile for your landing page<br /><br /><pre class="prettyprint"><br />    &lt;definition extends="template" name="errors.denied"&gt;<br />        &lt;put-attribute name="content" value="/WEB-INF/views/denied.jsp"&gt;<br />    &lt;/put-attribute&gt;&lt;/definition&gt;<br /></pre><br />Obviously, change the paths consequently to your denied.jsp location. <br /><span style="font-size: large;">You're done!</span><br /><br />Now, you just have to customize the jsp in order to show the contents you want.
