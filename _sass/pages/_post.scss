@@ -92,6 +92,14 @@ a.read-more {
   padding-bottom: 50px;
   .post-header {
     margin: 0 auto 50px;
+
+    h1 {
+      font-size: 1.5em;
+
+      @include media-query($medium-screen) {
+        font-size: 2em;
+      }
+    }
   }
 }
 
