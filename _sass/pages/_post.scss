@@ -157,6 +157,9 @@ a.read-more {
 .post-intro {
   height: 100%;
   margin-top: 1.2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
   .post-description {
     p {
@@ -173,8 +176,13 @@ a.read-more {
   }
 
   &.preview {
-    height: 100%;
-    float: left;
+    display: none;
+    @include media-query($large-screen) {
+      display: inline;
+      height: 100%;
+      min-width: 255px;
+      margin-right: 10px;
+    }
 
     img {
       max-height: 170px;
