@@ -15,6 +15,10 @@ modified_time: '2017-04-07T10:30:22.187+02:00'
 blogger_id: tag:blogger.com,1999:blog-8196940592943844696.post-5305401977153190905
 blogger_orig_url: http://keenformatics.blogspot.com/2017/04/how-to-generate-documentation-with.html
 comments: true
+# -image:
+#  -  feature: https://images.unsplash.com/photo-1440635592348-167b1b30296f?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250
+#  -  credit: thomas shellberg
+#  -  creditlink: https://unsplash.com/photos/Ki0dpxd3LGc
 
 ---
 
