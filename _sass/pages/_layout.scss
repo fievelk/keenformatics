@@ -17,6 +17,16 @@
     width: 100%;
   }
 }
+
+.post-page {
+  .cover {
+    min-height: 0;
+  }
+  .post-listing {
+    top: 100px;
+  }
+}
+
 .cover-card {
   color: $text-color;
   padding: 0 30px;
