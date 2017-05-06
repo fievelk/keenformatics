@@ -11,12 +11,12 @@ layout: default
   {% if page.image.feature contains 'https' or page.image.feature contains 'http' %}
   "{{ page.image.feature }}"
   {% else %}
-  "{{ site.url }}/img/{{ page.image.feature }}"
+  "{{ site.url }}/img/posts/{{ page.image.feature }}"
   {% endif %}
   alt="{{ page.title }} feature image">
 
   {% if page.image.credit %}
-  <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+  <div class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div>
   {% endif %}
 </div><!-- /.image-wrap -->
 {% endif %}

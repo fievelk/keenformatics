@@ -35,18 +35,18 @@ layout: default
     </header>
 
     <div class="post-intro">
-      {% if post.image.feature %}
+      {% if post.image.preview %}
       <div class="post-image-feature preview">
         <img src=
-        {% if post.image.feature contains 'http' %}
-        "{{ post.image.feature }}"
+        {% if post.image.preview contains 'http' %}
+        "{{ post.image.preview }}"
         {% else %}
-        "{{ site.url }}/img/{{ post.image.feature }}"
+        "{{ site.url }}/img/posts/{{ post.image.preview }}"
         {% endif %}
-        alt="{{ post.title }} feature image">
+        alt="{{ post.title }} preview image">
 
         {% if post.image.credit %}
-        <span class="image-credit">Photo Credit: <a href="{{ post.image.creditlink }}">{{ post.image.credit }}</a></span>
+        <div class="image-credit">Photo Credit: <a href="{{ post.image.creditlink }}">{{ post.image.credit }}</a></div>
         {% endif %}
       </div><!-- /.image-wrap -->
       {% endif %}
